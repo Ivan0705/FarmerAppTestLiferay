@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN"
+        "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.meera.dbservice">
+    <author>LiferayFarmer</author>
+    <namespace>LS</namespace>
+    <entity name="Farmer" local-service="true" remote-service="true">
+    <!-- PK fields -->
+    <column name="farmerId" type="long" primary="true" />
+    <column name="name" type="String" />
+    <column name="organization_legal" type="String" />
+    <column name="ITN" type="long" />
+    <column name="IEC" type="long" />
+    <column name="PSRN" type="long" />
+    <column name="area_registration" type="String" />
+    <column name="area_fields" type="String" />
+    <column name="date_registration" type="String" />
+    <column name="archive" type="int" />
+    <!-- Order -->
+    <order by="asc">
+        <order-column name="farmerId" />
+    </order>
+    <!-- Finder methods -->
+    <finder name="farmerId" return-type="Collection">
+        <finder-column name="farmerId"/>
+    </finder>
+</entity>
+
+    <entity name="Area" local-service="true" remote-service="true">
+        <!-- PK fields -->
+        <column name="areaId" type="long" primary="true" />
+        <column name="areaName" type="String" />
+        <column name="archive" type="int" />
+        <!-- Order -->
+        <order by="asc">
+            <order-column name="areaId" />
+        </order>
+        <!-- Finder methods -->
+        <finder name="areaId" return-type="Collection">
+            <finder-column name="areaId"/>
+        </finder>
+    </entity>
+
+    <entity name="Field" local-service="true" remote-service="true">
+        <!-- PK fields -->
+        <column name="fieldId" type="long" primary="true" />
+        <column name="areaId" type="long"/>
+        <column name="fieldName" type="String" />
+        <!-- Order -->
+        <order by="asc">
+            <order-column name="fieldId" />
+        </order>
+        <!-- Finder methods -->
+        <finder name="fieldId" return-type="Collection">
+            <finder-column name="fieldId"/>
+        </finder>
+    </entity>
+</service-builder>

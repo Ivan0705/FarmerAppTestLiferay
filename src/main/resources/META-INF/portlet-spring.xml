@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.meera.dbservice.service.AreaLocalService" class="com.meera.dbservice.service.impl.AreaLocalServiceImpl" />
+	<bean id="com.meera.dbservice.service.AreaService" class="com.meera.dbservice.service.impl.AreaServiceImpl" />
+	<bean id="com.meera.dbservice.service.persistence.AreaPersistence" class="com.meera.dbservice.service.persistence.AreaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.meera.dbservice.service.FarmerLocalService" class="com.meera.dbservice.service.impl.FarmerLocalServiceImpl" />
+	<bean id="com.meera.dbservice.service.FarmerService" class="com.meera.dbservice.service.impl.FarmerServiceImpl" />
+	<bean id="com.meera.dbservice.service.persistence.FarmerPersistence" class="com.meera.dbservice.service.persistence.FarmerPersistenceImpl" parent="basePersistence" />
+	<bean id="com.meera.dbservice.service.FieldLocalService" class="com.meera.dbservice.service.impl.FieldLocalServiceImpl" />
+	<bean id="com.meera.dbservice.service.FieldService" class="com.meera.dbservice.service.impl.FieldServiceImpl" />
+	<bean id="com.meera.dbservice.service.persistence.FieldPersistence" class="com.meera.dbservice.service.persistence.FieldPersistenceImpl" parent="basePersistence" />
+</beans>

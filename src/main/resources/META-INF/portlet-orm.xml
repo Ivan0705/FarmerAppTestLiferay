@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.meera.dbservice.model.impl.AreaModelImpl">
+		<attributes>
+			<id name="areaId" />
+			<basic name="areaName" />
+			<basic name="archive" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.meera.dbservice.model.impl.FarmerModelImpl">
+		<attributes>
+			<id name="farmerId" />
+			<basic name="name" />
+			<basic name="organization_legal" />
+			<basic name="ITN" />
+			<basic name="IEC" />
+			<basic name="PSRN" />
+			<basic name="area_registration" />
+			<basic name="area_fields" />
+			<basic name="date_registration" />
+			<basic name="archive" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.meera.dbservice.model.impl.FieldModelImpl">
+		<attributes>
+			<id name="fieldId" />
+			<basic name="areaId" />
+			<basic name="fieldName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.meera.dbservice.model.impl.AreaImpl" name="Area">
+		<table name="LS_Area" />
+		<attributes />
+	</entity>
+	<entity class="com.meera.dbservice.model.impl.FarmerImpl" name="Farmer">
+		<table name="LS_Farmer" />
+		<attributes />
+	</entity>
+	<entity class="com.meera.dbservice.model.impl.FieldImpl" name="Field">
+		<table name="LS_Field" />
+		<attributes />
+	</entity>
+</entity-mappings>

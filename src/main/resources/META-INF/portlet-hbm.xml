@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.meera.dbservice.model.Area" />
+	<import class="com.meera.dbservice.model.Farmer" />
+	<import class="com.meera.dbservice.model.Field" />
+	<class name="com.meera.dbservice.model.impl.AreaImpl" table="LS_Area">
+		<cache usage="read-write" />
+		<id name="areaId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="areaName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="archive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.meera.dbservice.model.impl.FarmerImpl" table="LS_Farmer">
+		<cache usage="read-write" />
+		<id name="farmerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organization_legal" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ITN" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="IEC" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="PSRN" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="area_registration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="area_fields" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="date_registration" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="archive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.meera.dbservice.model.impl.FieldImpl" table="LS_Field">
+		<cache usage="read-write" />
+		<id name="fieldId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="areaId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fieldName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

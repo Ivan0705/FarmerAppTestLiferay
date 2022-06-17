@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.meera.dbservice.model.Area">
+		<field name="areaId" type="long" />
+		<field name="areaName" type="String" />
+		<field name="archive" type="int" />
+	</model>
+	<model name="com.meera.dbservice.model.Farmer">
+		<field name="farmerId" type="long" />
+		<field name="name" type="String" />
+		<field name="organization_legal" type="String" />
+		<field name="ITN" type="long" />
+		<field name="IEC" type="long" />
+		<field name="PSRN" type="long" />
+		<field name="area_registration" type="String" />
+		<field name="area_fields" type="String" />
+		<field name="date_registration" type="String" />
+		<field name="archive" type="int" />
+	</model>
+	<model name="com.meera.dbservice.model.Field">
+		<field name="fieldId" type="long" />
+		<field name="areaId" type="long" />
+		<field name="fieldName" type="String" />
+	</model>
+</model-hints>

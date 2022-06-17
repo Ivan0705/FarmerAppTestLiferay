@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FarmerAppTestLiferay:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FarmerAppTestLiferay</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="FarmerAppTestLiferay-1.0.war">
+      <element id="artifact" artifact-name="FarmerAppTestLiferay:war exploded" />
+    </root>
+  </artifact>
+</component>
